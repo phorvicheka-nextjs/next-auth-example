@@ -87,6 +87,15 @@ export default function Header() {
           <li className={styles.navItem}>
             <Link href="/me">Me</Link>
           </li>
+          {!session && (
+            <li className={styles.navItem}>
+            로그인되지 않았습니다 <br />
+            <button onClick={() => signIn("google")}>로그인 google</button>
+            <button onClick={() => signIn("facebook")}>로그인 facebook</button>
+            <button onClick={() => signIn("kakao")}>로그인 kakao</button>
+          </li>
+          )}
+          
         </ul>
       </nav>
     </header>
