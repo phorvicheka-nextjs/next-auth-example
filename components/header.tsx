@@ -93,6 +93,7 @@ export default function Header() {
             <button onClick={() => signIn("google")}>로그인 google</button>
             <button onClick={() => signIn("facebook")}>로그인 facebook</button>
             <button onClick={() => signIn("kakao")}>로그인 kakao</button>
+            <button onClick={() => signIn("naver")}>로그인 naver</button>
           </li>
           )}
           

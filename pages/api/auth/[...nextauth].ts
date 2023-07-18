@@ -6,6 +6,7 @@ import TwitterProvider from "next-auth/providers/twitter"
 import Auth0Provider from "next-auth/providers/auth0"
 import CredentialsProvider from "next-auth/providers/credentials"
 import KakaoProvider from 'next-auth/providers/kakao'
+import NaverProvider from 'next-auth/providers/naver'
 // import AppleProvider from "next-auth/providers/apple"
 // import EmailProvider from "next-auth/providers/email"
 
@@ -31,6 +32,10 @@ export const authOptions: NextAuthOptions = {
       },
     }),
     */
+    NaverProvider({
+      clientId: process.env.NAVER_CLIENT_ID,
+      clientSecret: process.env.NAVER_CLIENT_SECRET
+    }),
     KakaoProvider({
       clientId: process.env.KAKAO_CLIENT_ID!,
       clientSecret: process.env.KAKAO_CLIENT_SECRET!,
